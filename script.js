@@ -8,45 +8,69 @@ const perguntas = [
     {
     enunciado: "isagi jogando",
     alternativas: [
-        "ele chuta para o aliado do time",
-        "ele chuta direto no gol"
+        { 
+            texto: "ele chuta para o aliado do time",
+            afirmacao: "afirmacao"
+        },
+        {
+            texto: "ele chuta direto no gol",
+            afirmacao: "afirmacao"
+        }
         ]
     },
     {
-    enunciado: "perde o jogo, chora, vai pra casa, recebe a carta",
+    enunciado: "perde o jogo, chora, vai pra casa, recebe a carta, pega-pega",
     alternativas: [
-        "bla bla bla",
-         "Alternativa 2",
+        {
+            texto: "chutar para o mais forte",
+            afirmacao: "afirmacao"
+        },
+        {
+            texto: "chutar para o mais fraco",
+            afirmacao: "afirmacao"
+        }
         ]
     },
     {
-    enunciado: "Pergunta 1",
+    enunciado: "elimina alguem, próxima etapa, dormitório e tals, enunciado da partida, jogando, isagi passa",
     alternativas: [
-        "Alternativa 1",
-        "Alternativa 2",
+        {
+            texto: "bachira",
+            afirmacao: "afirmacao"
+        },
+        {
+            texto: "kunigami",
+            afirmacao: "afirmacao"
+        }
         ]
     },
     {
-    enunciado: "Pergunta 1",
+    enunciado: "ego vendo, soa o apito e as posições, barou avança ",
     alternativas: [
-        "Alternativa 1",
-        "Alternativa 2",
-        ]
-    },
-    {
-    enunciado: "Pergunta 1",
-    alternativas: [
-        "Alternativa 1",
-        "Alternativa 2",
+        {
+            texto: "dois contra um na defesa",
+            afirmacao: "afirmacao"
+        },
+        {
+            texto: "vai pra linha do meio esperando a bola para o contra-ataque",
+            afirmacao: "afirmacao"
+        }
         ]
     },
 ]
-let atual = 0
+let atual = 0;
 let perguntaAtual;
 
 function mostraPergunta(){
     perguntaAtual = perguntas [atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativa.texto 
+    }
 }
 
 mostraPergunta();
